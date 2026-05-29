@@ -12,12 +12,12 @@ const ResumeSection = () => {
           <p className="resume-desc">
             Detailed overview of my Skills, Education and Experience.
           </p>
-          <span className="last-updated">Last Verified: January 2026</span>
+          <span className="last-updated">Last Verified: May 2026</span>
         </div>
 
         {/* ACTIONS */}
         <div className="resume-actions">
-          <a href="/resume.pdf" download="Arunkumar_Resume.pdf" className="download-btn">
+          <a href="/Updated Resume.pdf" download="Arunkumar_Resume.pdf" className="download-btn">
             DOWNLOAD PDF FILE
           </a>
         </div>
@@ -28,7 +28,7 @@ const ResumeSection = () => {
           <div className="scan-line"></div>
           
           <iframe 
-            src="/resume.pdf#view=FitH" 
+            src="/Updated Resume.pdf#view=FitH" 
             className="pdf-viewer" 
             title="Resume Viewer" 
           />
