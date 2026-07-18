@@ -78,8 +78,8 @@
 
 /* --- THE GLORIFYING BORDER FRAME --- */
 .icon-frame {
-  width: 54px;
-  height: 54px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   position: relative;
   
@@ -105,7 +105,7 @@
 
 /* --- THE ICON (Colorful & Glowing) --- */
 .skill-icon {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,14 +132,14 @@
 }
 
 .skill-name {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600; /* Increased weight slightly for visibility */
   
   /* CHANGED: Bright Sky Blue */
   color: #4FC3F7; 
   
   font-family: monospace; /* Tech font */
-  margin-top: 0.4rem;
+  margin-top: 0.6rem;
   transition: all 0.3s ease;
   
   /* Slight Glow to make it pop against the black background */
@@ -167,6 +167,6 @@
 
 @media (min-width: 769px) {
   .skills-container {
-    padding-left: 120px; /* Shift content to the right to clear floating nav bar */
+    padding-left: 200px; /* Shift content to the right to clear floating nav bar */
   }
 }

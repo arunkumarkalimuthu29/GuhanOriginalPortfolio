@@ -9,7 +9,7 @@
   z-index: 100;
   display: flex;
   justify-content: center;
-  width: 140px; 
+  width: 200px; 
   pointer-events: none;
 }
 
@@ -45,8 +45,8 @@
 }
 
 /* --- ZIG-ZAG POSITIONING --- */
-.nav-wrapper:nth-child(odd) { transform: translateX(-25px); }
-.nav-wrapper:nth-child(even) { transform: translateX(25px); }
+.nav-wrapper:nth-child(odd) { transform: translateX(-30px); }
+.nav-wrapper:nth-child(even) { transform: translateX(30px); }
 
 /* --- THE SHAPE (ELLIPSE / ROUNDED) --- */
 .nav-hex {
@@ -56,8 +56,8 @@
   /* 2. CHANGED: Rounded Ellipse/Pill Shape (Removed clip-path) */
   border-radius: 50px; 
   
-  width: 110px; 
-  height: 48px; 
+  width: 146px; 
+  height: 54px; 
   
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@
 /* Text Styling */
 .nav-text {
   font-family: 'Courier New', monospace;
-  font-size: 0.75rem; 
+  font-size: 0.85rem; 
   font-weight: 700;
   color: #FFFFFF; 
   letter-spacing: 1px;
@@ -98,12 +98,12 @@
 
 /* LINE ROTATION */
 .nav-wrapper:nth-child(odd) .zig-zag-line {
-  transform: rotate(-30deg); 
-  height: 65px; 
+  transform: rotate(-35deg); 
+  height: 75px; 
 }
 .nav-wrapper:nth-child(even) .zig-zag-line {
-  transform: rotate(30deg); 
-  height: 65px;
+  transform: rotate(35deg); 
+  height: 75px;
 }
 
 /* --- ACTIVE STATE (Gold) --- */

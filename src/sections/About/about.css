@@ -46,7 +46,7 @@
 
 .about-title {
   font-family: system-ui, -apple-system, sans-serif;
-  font-size: 2.4rem;
+  font-size: 2.7rem;
   color: #ffffff;
   font-weight: 800;
   margin: 0;
@@ -72,8 +72,8 @@
 .about-p {
   font-family: system-ui, -apple-system, sans-serif;
   color: #cccccc;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.65;
   margin: 0;
   font-weight: 400;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -252,6 +252,6 @@
 
 @media (min-width: 769px) {
   .about-container {
-    padding-left: 120px; /* Shift content right to clear the left navigation menu */
+    padding-left: 200px; /* Shift content right to clear the left navigation menu */
   }
 }

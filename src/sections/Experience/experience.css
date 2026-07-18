@@ -87,14 +87,14 @@
 .grid-row-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
 .grid-row-3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -103,10 +103,10 @@
   background: #111111;
   border: 1px solid rgba(255, 215, 0, 0.3); /* Gold Border */
   border-radius: 12px;
-  padding: 1.2rem 1.5rem;
+  padding: 1.5rem 1.8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.8rem;
   position: relative;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -175,7 +175,7 @@
 
 .card-role {
   color: #FFFFFF;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
@@ -190,7 +190,7 @@
 
 .card-org {
   color: #FFFFFF;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 600;
   margin: 0;
   letter-spacing: 0.5px;
@@ -198,8 +198,8 @@
 
 .card-desc {
   color: #FFFFFF; 
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.6;
   font-weight: 300;
   margin: 0;
   opacity: 0.9;
@@ -230,6 +230,6 @@
 
 @media (min-width: 769px) {
   .experience-section {
-    padding-left: 120px; /* Shift content to the right to clear floating nav bar */
+    padding-left: 200px; /* Shift content to the right to clear floating nav bar */
   }
 }
