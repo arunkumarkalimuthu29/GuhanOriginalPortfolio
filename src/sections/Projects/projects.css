@@ -311,3 +311,9 @@
     font-size: 0.9rem;
   }
 }
+
+@media (min-width: 769px) {
+  .projects-container {
+    padding-left: 120px; /* Shift content right to clear the left navigation menu */
+  }
+}

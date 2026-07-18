@@ -249,3 +249,9 @@
     border-radius: 16px;
   }
 }
+
+@media (min-width: 769px) {
+  .about-container {
+    padding-left: 120px; /* Shift content right to clear the left navigation menu */
+  }
+}
