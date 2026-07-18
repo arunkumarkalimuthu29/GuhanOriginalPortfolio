@@ -1,7 +1,7 @@
 /* src/sections/Skills/skills.css */
 
 .skills-container {
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@
 .skills-header {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -35,13 +35,13 @@
 .skills-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1.5rem;
 }
 
 /* --- CATEGORY TITLES (Polished Gradient) --- */
 .category-title {
   font-size: 1.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: inline-block;
@@ -59,7 +59,7 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 2.5rem 1.5rem; /* More vertical gap */
+  gap: 1rem 1.2rem; /* More vertical gap */
 }
 
 /* --- THE CARD --- */
@@ -78,8 +78,8 @@
 
 /* --- THE GLORIFYING BORDER FRAME --- */
 .icon-frame {
-  width: 70px;
-  height: 70px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   position: relative;
   
@@ -105,7 +105,7 @@
 
 /* --- THE ICON (Colorful & Glowing) --- */
 .skill-icon {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,14 +132,14 @@
 }
 
 .skill-name {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600; /* Increased weight slightly for visibility */
   
   /* CHANGED: Bright Sky Blue */
   color: #4FC3F7; 
   
   font-family: monospace; /* Tech font */
-  margin-top: 0.8rem;
+  margin-top: 0.4rem;
   transition: all 0.3s ease;
   
   /* Slight Glow to make it pop against the black background */
@@ -162,5 +162,11 @@
     opacity: 1;
     transform: translate(0, 0) rotate(0) scale(1);
     filter: blur(0);
+  }
+}
+
+@media (min-width: 769px) {
+  .skills-container {
+    padding-left: 120px; /* Shift content to the right to clear floating nav bar */
   }
 }

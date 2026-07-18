@@ -13,7 +13,7 @@ const AIAssistant = () => {
 
   // Initial History
   const [messages, setMessages] = useState([
-    { role: 'ai', content: "Hello. I am the system assistant. Ask me about Arunkumar's projects, skills, or engineering philosophy." }
+    { role: 'ai', content: "Hello. I am the system assistant. Ask me about Guhan's projects, skills, or engineering philosophy." }
   ]);
 
   const messagesEndRef = useRef(null);

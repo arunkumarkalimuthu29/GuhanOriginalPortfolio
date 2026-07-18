@@ -4,80 +4,80 @@ export const RESUME_DATA = [
   // --- 1. NAME (Specific Rule) ---
   {
     keywords: ["name", "full name", "called", "who is he"],
-    response: "His full name is Arunkumar K."
+    response: "His full name is Guhan T."
   },
 
   // --- 2. DOMAIN & INTERESTS ---
   {
     keywords: ["domain", "interest", "passion", "focus", "specialize", "field"],
-    response: "Arunkumar is strictly focused on Full-Stack Development and AI Innovation. He loves solving complex problems using scalable web solutions and integrating Artificial Intelligence into real-world applications."
+    response: "Guhan is focused on Electronics and Communication Engineering, Embedded Systems, Artificial Intelligence, Machine Learning, and Intelligent Software Development. He loves exploring emerging technologies and improving problem-solving skills through hands-on projects."
   },
 
   // --- 3. SKILLS ---
   {
     keywords: ["skill","skills", "stack", "technology", "tech", "language", "coding", "program", "know"],
-    response: "He is proficient in React.js, Node.js, Express, MongoDB (MERN Stack). He also has strong core skills in Java, Python, C++ and Data Structures & Algorithms."
+    response: "Guhan is proficient in Java, Python, SQL, HTML, CSS, JavaScript, Arduino programming, Embedded Systems, and Internet of Things (IoT). His database and software tools include MySQL, Git, GitHub, and VS Code. He is also knowledgeable in AI fundamentals, ML basics, and Data Structures."
   },
 
-  // --- 4. GREETINGS (Generic - Moved lower and removed "Arunkumar") ---
+  // --- 4. GREETINGS (Generic) ---
   {
     keywords: ["hi", "hello", "hey", "greetings", "morning", "evening", "who are you", "start", "bot", "assistant"],
-    response: "Hello! I am Arunkumar's AI Assistant. I can tell you about his Domain, Skills, Projects, Achievements, or CGPA. What would you like to know?"
+    response: "Hello! I am Guhan's AI Assistant. I can tell you about his Domain, Skills, Projects, Experience, or Resume. What would you like to know?"
   },
 
   // --- 5. PROFILES ---
   {
     keywords: ["profile", "profiles", "link", "handle", "platform", "url", "online", "github"],
-    response: "Here are his active professional profiles:\n• LeetCode: 550+ Problems Solved\n• SkillRack: 605+ Problems Solved\n• GitHub: For project repositories\n• LinkedIn: For professional updates\n(Clickable links are in the Projects section.)"
+    response: "Here are his active professional profiles:\n• GitHub: github.com/GUHAN0205\n• LinkedIn: linkedin.com/in/guhan-t-554726314"
   },
 
   // --- 6. ACHIEVEMENTS ---
   {
-    keywords: ["achievement", "achievements", "coding", "rank", "stats", "leetcode", "skillrack", "problem", "solving"],
-    response: "Arunkumar is a competitive programmer with impressive stats: \n• LeetCode: Solved around 550+ problems.\n• SkillRack: Solved around 605+ problems.\nHe consistently practices algorithmic thinking."
+    keywords: ["achievement", "achievements", "prize", "win", "competition", "compete"],
+    response: "Guhan has notable achievements, including:\n• Science Olympiad Foundation: Secured First Prize in the Inter-School competition.\n• Handball Competition: Secured First Prize in the Inter-College competition."
   },
 
   // --- 7. EDUCATION ---
   {
-    keywords: ["cgpa", "grade", "score", "education", "college", "degree", "university", "study", "mark", "institute", "semester", "year"],
-    response: "He is currently in his 3rd Year (6th Semester) pursuing B.E. Computer Science and Engineering at Chennai Institute of Technology, Chennai, maintaining a strong CGPA of 8.6."
+    keywords: ["education", "college", "degree", "university", "study", "mark", "institute", "student"],
+    response: "He is currently an Electronics and Communication Engineering student passionate about embedded software development and machine learning."
   },
 
   // --- 8. CERTIFICATIONS ---
   {
     keywords: ["certification", "certifications", "certificate", "course", "learn", "badge"],
-    response: "He holds several major certifications:\n1. Responsive Web Design (freeCodeCamp)\n2. Supervised Machine Learning (DeepLearning.AI)\n3. Data Structures (UCSD)\n4. Ethical Hacking (NPTEL)\n5. Cisco Networking (Cisco Academy)"
+    response: "He holds certifications in:\n1. Database Management and SQL (Infosys Springboard)\n2. Java Foundation (Scalar Academy & GUVI)\n3. Principles of Generative AI (Infosys Springboard)"
   },
 
   // --- 9. PROJECTS ---
   {
     keywords: ["project", "projects", "work", "portfolio", "app", "website", "build"],
-    response: "He has built multiple full-stack applications. Key highlights include this Portfolio Website itself and AI-integrated web apps. Check the 'PROJECTS' section for demos."
+    response: "He has built impressive AI-powered applications. Key projects include:\n• Pest Detective Agent: An AI crop pest/disease detection web application.\n• GameSense AI: An AI-powered gaming coach and performance assistant.\nCheck the 'PROJECTS' section to slide through their details!"
   },
 
   // --- 10. EXPERIENCE ---
   {
     keywords: ["experience", "job", "intern", "company", "work history", "role", "internship"],
-    response: "Arunkumar has gained industry experience through internships in software development. Check the 'EXP & ACH' section for his timeline."
+    response: "Guhan has completed several internships:\n• AI Intern at Infosys Springboard (1 Month Virtual Internship)\n• Arduino Programming Intern at Internshala (1 Month Virtual Internship)"
   },
 
   // --- 11. CONTACT ---
   {
     keywords: ["contact", "email", "mail", "phone", "reach", "hire", "address", "linkedin"],
-    response: "You can reach him via:\n •Email: arunkumark.cse2023@citchennai.net \n •LinkedIn: linkedin.com/in/arunkumark2006/ \nOr use the Contact Form below."
+    response: "You can reach Guhan via:\n• Email: trmanoguhan@gmail.com\n• Phone: +91 6379791441\n• LinkedIn: linkedin.com/in/guhan-t-554726314\n• GitHub: github.com/GUHAN0205"
   },
 
   // --- 12. RESUME ---
   {
     keywords: ["resume", "cv", "download", "pdf", "file"],
-    response: "Here is a quick summary of his Resume:\n\n• Education: BE. CSE at CIT (CGPA: 8.6)\n• Experience: Cisco Networking Intern & Research Intern (2 Publications)\n• Projects: Personal AI Assistant, Voice Calculator & Robotic Arm UI\n• Skills: C++, Java, Python, React.js, Node.js\n• Achievements: Solved 1100+ coding problems combined.\n\nFor the full detailed document, please Download the PDF or view it in the 'RESUME' section."
+    response: "Here is a quick summary of his Resume:\n• Education: Electronics and Communication Engineering Student\n• Experience: AI Intern (Infosys Springboard) & Arduino Programming Intern (Internshala)\n• Projects: Pest Detective Agent & GameSense AI\n• Skills: Java, Python, SQL, Arduino, Embedded Systems, IoT, MySQL, Git/GitHub, AI & ML basics\n• Certifications: SQL, Java, and Generative AI\n\nYou can view and download his complete detailed resume in the 'RESUME' section."
   },
 
   // --- 13. ABOUT ---
   {
     keywords: ["about", "who", "Who", "summary", "intro", "bio"],
-    response: "Arunkumar K is a Computer Science and Engineering student passionate about clean code, scalable systems, and bridging the gap between Web Development and AI."
+    response: "Guhan T is an Electronics and Communication Engineering student with a strong passion for building intelligent software solutions and innovative embedded systems."
   }
 ];
 
-export const FALLBACK_RESPONSE = "I missed that. Try asking about my College, CGPA, LeetCode stats, Certifications, or Projects!";
+export const FALLBACK_RESPONSE = "I missed that. Try asking about my Domain, Skills, Experience, Certifications, or Projects!";

@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './logo.css';
 
 const Logo = ({ onClick }) => {
-  const [text, setText] = useState("ARUNKUMAR K");
+  const [text, setText] = useState("GUHAN T");
 
   useEffect(() => {
     // Loop the text every 4 seconds
     const interval = setInterval(() => {
-      setText(prev => prev === "ARUNKUMAR K" ? "HOME" : "ARUNKUMAR K");
+      setText(prev => prev === "GUHAN T" ? "HOME" : "GUHAN T");
     }, 4000);
 
     return () => clearInterval(interval);

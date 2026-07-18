@@ -29,7 +29,7 @@ function App() {
 
   // ✅ ACTIVATE SCROLL NAVIGATION HOOK
   // This will silently listen for scroll events and trigger handleNavigate
-  useScrollNavigation(currentSection, handleNavigate);
+  // useScrollNavigation(currentSection, handleNavigate);
 
   // Logic: Go Home
   const handleGoHome = () => {

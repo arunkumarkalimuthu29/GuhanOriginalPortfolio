@@ -55,54 +55,107 @@
   animation: fadeInText 1s ease forwards 0.5s; /* 0.5s delay */
 }
 
-/* --- BUTTON CONTAINER --- */
-.contact-actions {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+/* --- CARDS GRID --- */
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 650px;
+  margin-top: 1rem;
 }
 
-/* --- BUTTONS: The Blast Effect --- */
-.contact-btn {
-  display: inline-flex;
+/* --- CONTACT CARD (Glassmorphism) --- */
+.contact-card {
+  background: rgba(15, 15, 15, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  text-align: left;
+  
+  /* Initial state for blast entry */
+  opacity: 0;
+  transform: scale(0);
+}
+
+.contact-card:hover {
+  background: rgba(22, 22, 22, 0.85);
+  border-color: var(--accent-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 215, 0, 0.05);
+  transform: translateY(-5px);
+}
+
+.contact-icon-frame {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.2rem 3rem;
-  border-radius: 50px;
-  
-  /* Initial State */
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: #FFFFFF;
-  
-  font-family: monospace;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  text-decoration: none;
-  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  min-width: 180px;
+  flex-shrink: 0;
+}
+
+.contact-card:hover .contact-icon-frame {
+  border-color: var(--accent-color);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 3px currentColor);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.contact-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  overflow: hidden;
+}
+
+.contact-type {
+  color: #888888;
+  font-family: monospace;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  
-  /* Pre-Animation State */
-  opacity: 0;
-  transform: scale(0); 
+  letter-spacing: 0.5px;
+}
+
+.contact-value {
+  color: #FFFFFF;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.contact-card:hover .contact-value {
+  color: var(--accent-color);
 }
 
 /* APPLY BLAST ANIMATION */
 .blast-effect {
   animation: blastEntry 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-/* HOVER STATE */
-.contact-btn:hover {
-  background: #FFFFFF;
-  color: #000000;
-  border-color: #FFFFFF;
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6); 
-  transform: translateY(-5px);
 }
 
 /* --- ANIMATIONS (FIXED) --- */
@@ -160,5 +213,15 @@
 @media (max-width: 768px) {
   .contact-title { font-size: 2.5rem; }
   .contact-text { font-size: 1rem; }
-  .contact-btn { padding: 1rem 2rem; min-width: 140px; }
+  .contact-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+  .contact-card {
+    padding: 1.2rem;
+  }
+  .contact-value {
+    font-size: 0.95rem;
+  }
 }

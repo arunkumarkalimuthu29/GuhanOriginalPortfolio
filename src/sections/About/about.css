@@ -8,18 +8,14 @@
   justify-content: center;
   align-items: center;
   background-color: #050505; /* Deep Polished Black */
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   overflow: hidden; /* Prevents scrollbars during slide-in */
 }
 
 /* --- ANIMATION: Slide In From Right --- */
 .about-content {
   width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  
+  max-width: 1100px;
   opacity: 0;
   transform: translateX(100px); /* Start 100px to the right */
   animation: slideInRight 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
@@ -32,147 +28,224 @@
   }
 }
 
-/* --- HEADER --- */
-.about-header {
-  text-align: center;
-  margin-bottom: 1rem;
+/* --- GRID LAYOUT --- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
 }
 
-.intro-statement {
+/* --- LEFT COLUMN: TEXT CONTENT --- */
+.about-text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.about-title {
   font-family: system-ui, -apple-system, sans-serif;
-  font-size: 2.2rem;
-  color: #fff;
-  line-height: 1.3;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle Shine */
+  font-size: 2.4rem;
+  color: #ffffff;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-.highlight {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 1rem;
-  
-  /* THEME: Polished Gold-to-Pink Gradient */
+.highlight-inline {
   background: linear-gradient(135deg, #FFD700 20%, #FF1493 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  
-  /* Shine Filter */
   filter: drop-shadow(0 0 8px rgba(255, 20, 147, 0.3));
 }
 
-/* --- THE LADDER LAYOUT --- */
-.pillars-grid {
+.about-paragraphs {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  width: 100%;
+  gap: 1.2rem;
 }
 
-/* --- THE PILLAR CARD (Polished Glass) --- */
-.pillar-card {
-  width: 65%;
-  min-width: 320px;
-  padding: 2.5rem 3rem;
-  
-  /* Shape */
-  border-radius: 60px;
-  
-  /* Material: Dark Glass */
-  background: rgba(15, 15, 15, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
-}
-
-/* HOVER: Brightens and Glows */
-.pillar-card:hover {
-  background: rgba(25, 25, 25, 1);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateX(-10px); /* Move slightly LEFT to meet mouse */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-}
-
-/* --- ACCENT BARS (The Theme Colors) --- */
-
-/* 1. Top Left - Gold */
-.pillar-card.accent-gold {
-  align-self: flex-start;
-  border-left: 4px solid #FFD700; /* Gold Bar */
-}
-.pillar-card.accent-gold:hover {
-  box-shadow: -5px 5px 20px rgba(255, 215, 0, 0.1); /* Gold Glow */
-}
-
-/* 2. Center - Silver/White */
-.pillar-card.accent-silver {
-  align-self: center;
-  border-left: 4px solid #FFFFFF; /* White Bar */
-}
-.pillar-card.accent-silver:hover {
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1); /* White Glow */
-}
-
-/* 3. Bottom Right - Pink */
-.pillar-card.accent-pink {
-  align-self: flex-end;
-  border-left: 4px solid #FF1493; /* Pink Bar */
-}
-.pillar-card.accent-pink:hover {
-  box-shadow: 5px 5px 20px rgba(255, 20, 147, 0.15); /* Pink Glow */
-}
-
-
-/* --- TEXT STYLES --- */
-.pillar-title {
-  font-size: 1.3rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-}
-
-.pillar-text {
-  /* CHANGED: Much brighter Platinum color */
-  color: #E5E5E5; 
-  
-  /* CHANGED: Increased weight slightly for legibility */
-  font-weight: 400; 
-  
+.about-p {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #cccccc;
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
-  
-  /* Optional: Tiny drop shadow to pop against the dark glass */
+  font-weight: 400;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* --- RIGHT COLUMN: HIGHLIGHTS CARD --- */
+.about-card-column {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.highlights-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 1.8rem 1.6rem;
+  border-radius: 18px;
+  background: rgba(15, 15, 15, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpCard 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;
+}
+
+@keyframes slideUpCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.highlights-card:hover {
+  background: rgba(22, 22, 22, 0.85);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 20, 147, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Accent top-border simulation via a subtle glowing element */
+.card-border-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD700, #FF1493);
+}
+
+/* --- ABOUT PROFILE PHOTO --- */
+.about-profile-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto 1.2rem auto;
+  position: relative;
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.1);
+  text-align: center;
+}
+
+.about-profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#0f0f0f, #0f0f0f), 
+                    linear-gradient(135deg, #FFD700, #FF1493);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: 2;
+  position: relative;
+}
+
+.about-profile-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFD700, #FF1493);
+  z-index: 1;
+  filter: blur(6px);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.highlights-card:hover .about-profile-glow {
+  opacity: 0.8;
+  filter: blur(8px);
+}
+
+.highlights-title {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.highlights-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.bullet {
+  font-size: 1.2rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.bullet.gold {
+  color: #FFD700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.bullet.pink {
+  color: #FF1493;
+  text-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+}
+
+.highlight-item {
+  color: #e0e0e0;
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
 /* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 768px) {
-  .pillar-card {
-    width: 100%;
-    border-radius: 20px;
-    align-self: center !important;
-    transform: none !important; /* Disable hover move on touch */
+@media (max-width: 868px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
   
-  .intro-statement {
-    font-size: 1.5rem;
+  .about-title {
+    font-size: 2.2rem;
+    text-align: center;
   }
-  .highlight {
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
+  
+  .about-p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .about-card-column {
+    width: 100%;
+  }
+  
+  .highlights-card {
+    max-width: 100%;
+    border-radius: 16px;
   }
 }

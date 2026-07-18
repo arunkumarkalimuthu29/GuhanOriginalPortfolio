@@ -22,7 +22,58 @@
   align-items: center;
   text-align: center;
   /* Visual adjustment: Nudge slightly up */
-  padding-bottom: 5vh;
+  padding-bottom: 12vh;
+}
+
+/* --- PROFILE IMAGE CONTAINER --- */
+.profile-image-container {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  box-shadow: 0 0 30px rgba(255, 20, 147, 0.15);
+}
+
+.profile-image-container.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid transparent;
+  background-image: linear-gradient(#050505, #050505), 
+                    linear-gradient(135deg, #FFD700, #FF1493);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  z-index: 2;
+  position: relative;
+}
+
+.profile-glow-ring {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFD700, #FF1493);
+  z-index: 1;
+  filter: blur(8px);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover .profile-glow-ring {
+  opacity: 0.9;
+  filter: blur(12px);
 }
 
 /* --- 1. THE NAME (Polished Yellow & Pink Gradient) --- */
@@ -30,7 +81,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   
   /* TYPOGRAPHY */
   font-family: system-ui, -apple-system, sans-serif;

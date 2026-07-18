@@ -1,58 +1,43 @@
 import React, { useState } from 'react';
 import './projects.css';
 
-// Make sure these paths match your structure and filenames exactly!
-import aiAssistantImg from "../../assets/Ai-Assistant.png";
-import voiceAssistantImg from "../../assets/Ai-voice-assistant.png"; 
-import sArmImg from "../../assets/S-arm.png";
-
 const projectsData = [
   {
     id: 1,
-    name: "Personal AI Assistant",
-    image: aiAssistantImg, 
+    name: "Pest Detective Agent",
+    image: "/cropproject.png", 
     links: {
-      github: "https://github.com/Arunkumark29/jarvis-ai-assistant", 
-      demo: "https://ai-assistant-jarvise.vercel.app/"            
+      github: "https://github.com/GUHAN0205/Pest-Detective-agent", 
+      demo: "https://pest-detective-agent-1.onrender.com/"            
     },
-    // Changed to simple 4-point list
-    points: [
-      "Designed a modular system separating frontend voice interaction from backend AI logic.",
-      "Implemented real-time speech-to-text and intent recognition for seamless control.",
-      "Integrated external AI services to handle complex reasoning and contextual responses.",
-      "Built a scalable architecture allowing for future expansion of voice commands."
-    ]
+    shortDesc: "An AI-powered web application that detects crop pests and diseases from plant leaf images while providing intelligent treatment recommendations.",
+    overview: "Developed to assist farmers and agricultural professionals in identifying crop pests and diseases early. By analyzing uploaded plant leaf images, the system predicts the affected disease/pest with a confidence score and generates treatment/prevention recommendations.",
+    features: [
+      "Crop pest and disease detection using MobileNetV2",
+      "Plant leaf image upload with confidence score predictions",
+      "Actionable treatment & prevention recommendations",
+      "Scouting history dashboard & field location tracking",
+      "Secure user authentication & downloadable reports"
+    ],
+    techStack: ["React.js", "Python Flask", "TensorFlow", "OpenCV", "MobileNetV2", "MySQL", "HTML5", "CSS3", "JavaScript"]
   },
   {
     id: 2,
-    name: "Voice-Enabled Calculator",
-    image: voiceAssistantImg, 
+    name: "GameSense AI",
+    image: "/gameproject.png", 
     links: {
-      github: "https://github.com/Arunkumark29/Voice-Calculator",   
-      demo: "https://voice-calculator-3svlmbrdp.vercel.app/"            
+      github: "https://github.com/GUHAN0205/GameSense-AI",   
+      demo: "https://game-sense-ai.vercel.app/"            
     },
-    points: [
-      "Developed a hands-free mathematical tool for accessible, real-time calculation.",
-      "Engineered a parsing engine to convert spoken natural language into mathematical expressions.",
-      "Ensured deterministic accuracy by separating speech recognition from calculation logic.",
-      "Optimized for low latency to provide instant feedback during voice interaction."
-    ]
-  },
-  {
-    id: 3,
-    name: "S-ARM Control UI",
-    image: sArmImg, 
-    links: {
-      github: "https://github.com/Arunkumark29/S-ARM-Control-System",     
-      demoBase: "https://sarm-base-control.vercel.app/", 
-      demoArm: "https://arm-control-joystick-t4no.vercel.app/"                  
-    },
-    points: [
-      "Created a specialized control interface for precise robotic arm manipulation.",
-      "Implemented modular joystick components to translate user input into hardware commands.",
-      "Focused on a direct control system layout rather than traditional web navigation.",
-      "Designed for real-time responsiveness to ensure safety and accuracy in operation."
-    ]
+    shortDesc: "An AI-powered gaming assistant that analyzes player performance and delivers personalized coaching recommendations.",
+    overview: "A multi-game AI coaching platform designed to evaluate gameplay statistics, identify performance patterns, and generate personalized recommendations. Helps players understand strengths/weaknesses and gain AI-driven insights to level up.",
+    features: [
+      "Gameplay performance stats analysis",
+      "AI-powered coaching recommendations & personalized feedback",
+      "Multi-game support with performance analytics dashboard",
+      "Fully responsive and interactive modern user interface"
+    ],
+    techStack: ["React", "TypeScript", "Python", "JavaScript", "HTML", "CSS"]
   }
 ];
 
@@ -97,7 +82,7 @@ const ProjectsSection = () => {
             >
               ← PREV
             </button>
-            <span className="nav-counter">0{activeProject.id} / 03</span>
+            <span className="nav-counter">0{activeProject.id} / 0{projectsData.length}</span>
             <button 
               className="nav-btn" 
               onClick={handleNext} 
@@ -112,19 +97,36 @@ const ProjectsSection = () => {
         <div className="project-details slide-in-right">
           <header className="project-header">
             <h2 className="project-name">{activeProject.name}</h2>
+            <p className="project-short-desc">{activeProject.shortDesc}</p>
             <div className="project-line"></div>
           </header>
 
           <div className="project-body">
-            {/* 4 Points List */}
-            <ul className="project-points">
-              {activeProject.points.map((point, index) => (
-                <li key={index} className="point-item">
-                  <span className="point-bullet">›</span>
-                  {point}
-                </li>
-              ))}
-            </ul>
+            <div className="project-overview-box">
+              <h4 className="body-section-title">Overview</h4>
+              <p className="project-overview">{activeProject.overview}</p>
+            </div>
+
+            <div className="project-features-box">
+              <h4 className="body-section-title">Key Features</h4>
+              <ul className="project-points">
+                {activeProject.features.map((feature, index) => (
+                  <li key={index} className="point-item">
+                    <span className="point-bullet">›</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="project-tech-box">
+              <h4 className="body-section-title">Tech Stack</h4>
+              <div className="tech-tags">
+                {activeProject.techStack.map((tech, index) => (
+                  <span key={index} className="tech-tag">{tech}</span>
+                ))}
+              </div>
+            </div>
             
             <div className="project-links">
               <a href={activeProject.links.github} target="_blank" rel="noopener noreferrer" className="link-item">
@@ -134,18 +136,6 @@ const ProjectsSection = () => {
               {activeProject.links.demo && (
                 <a href={activeProject.links.demo} target="_blank" rel="noopener noreferrer" className="link-item highlight-link">
                   Live System
-                </a>
-              )}
-
-              {/* S-ARM Specific Links */}
-              {activeProject.links.demoBase && (
-                <a href={activeProject.links.demoBase} target="_blank" rel="noopener noreferrer" className="link-item">
-                  Base Control
-                </a>
-              )}
-              {activeProject.links.demoArm && (
-                <a href={activeProject.links.demoArm} target="_blank" rel="noopener noreferrer" className="link-item">
-                  Arm Control
                 </a>
               )}
             </div>

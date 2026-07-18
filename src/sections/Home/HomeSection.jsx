@@ -3,7 +3,7 @@ import './Home.css';
 
 const HomeSection = ({ onStart }) => {
   const [isAssembled, setIsAssembled] = useState(false);
-  const name = "ARUNKUMAR K";
+  const name = "GUHAN T";
 
   useEffect(() => {
     // Trigger the animation 100ms after mount
@@ -22,6 +22,12 @@ const HomeSection = ({ onStart }) => {
     <section className="home-container" onClick={onStart}>
       <div className="home-content">
         
+        {/* Profile Image with Glowing Theme Ring */}
+        <div className={`profile-image-container ${isAssembled ? 'visible' : ''}`}>
+          <img src="/Photo.jpg.jpeg" alt="Guhan T" className="profile-img" />
+          <div className="profile-glow-ring"></div>
+        </div>
+
         {/* 1. Name: Gradient Yellow & Pink */}
         <div className={`name-container ${isAssembled ? 'assembled' : ''}`}>
           {name.split('').map((char, index) => (
@@ -37,9 +43,9 @@ const HomeSection = ({ onStart }) => {
 
         {/* 2. Identity: Polished Shining White */}
         <div className={`identity-line ${isAssembled ? 'visible' : ''}`}>
-          <span className="shiny-text">Software Engineering Student with Ai Passion</span>
+          <span className="shiny-text">Electronics and Communication Engineering Student</span>
           <span className="separator">|</span>
-          <span className="shiny-text">First Principles Thinking</span>
+          <span className="shiny-text">Passionate about Embedded Systems, AI, ML, & Intelligent Software Development</span>
         </div>
 
         {/* 3. Hint: Polished Gray */}
