@@ -3,13 +3,13 @@
 /* --- CONTAINER --- */
 .chain-container {
   position: fixed;
-  left: 2rem;
+  left: 1.2rem;
   top: 50%;
   transform: translateY(-50%);
   z-index: 100;
   display: flex;
   justify-content: center;
-  width: 200px; 
+  width: 120px; 
   pointer-events: none;
 }
 
@@ -27,7 +27,7 @@
 .chain-list {
   display: flex;
   flex-direction: column;
-  gap: 35px; 
+  gap: 26px; 
   width: 100%;
   position: relative;
   pointer-events: auto;
@@ -40,13 +40,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  height: 50px; 
+  height: 42px; 
   transition: transform 0.3s ease;
 }
 
 /* --- ZIG-ZAG POSITIONING --- */
-.nav-wrapper:nth-child(odd) { transform: translateX(-30px); }
-.nav-wrapper:nth-child(even) { transform: translateX(30px); }
+.nav-wrapper:nth-child(odd) { transform: translateX(-14px); }
+.nav-wrapper:nth-child(even) { transform: translateX(14px); }
 
 /* --- THE SHAPE (ELLIPSE / ROUNDED) --- */
 .nav-hex {
@@ -56,8 +56,8 @@
   /* 2. CHANGED: Rounded Ellipse/Pill Shape (Removed clip-path) */
   border-radius: 50px; 
   
-  width: 146px; 
-  height: 54px; 
+  width: 86px; 
+  height: 36px; 
   
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@
 /* Text Styling */
 .nav-text {
   font-family: 'Courier New', monospace;
-  font-size: 0.85rem; 
+  font-size: 0.65rem; 
   font-weight: 700;
   color: #FFFFFF; 
   letter-spacing: 1px;
@@ -98,12 +98,12 @@
 
 /* LINE ROTATION */
 .nav-wrapper:nth-child(odd) .zig-zag-line {
-  transform: rotate(-35deg); 
-  height: 75px; 
+  transform: rotate(-20deg); 
+  height: 50px; 
 }
 .nav-wrapper:nth-child(even) .zig-zag-line {
-  transform: rotate(35deg); 
-  height: 75px;
+  transform: rotate(20deg); 
+  height: 50px;
 }
 
 /* --- ACTIVE STATE (Gold) --- */
